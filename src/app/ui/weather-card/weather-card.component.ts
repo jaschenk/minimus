@@ -26,18 +26,18 @@ export class WeatherCardComponent implements OnInit, OnDestroy {
       this.darkMode = isDark;
     });
 
-    this.weather.getWeatherState('Paris')
+    this.weather.getWeatherState('Manzanita, US')
       .subscribe((data: string) => {
         this.condition = data;
       });
 
-    this.weather.getCurrentTemp('Paris').subscribe((data: number) => {
+    this.weather.getCurrentTemp('Manzanita, US').subscribe((data: number) => {
       this.currentTemp = data;
     });
-    this.weather.getMinTemp('Paris').subscribe((data: number) => {
+    this.weather.getMinTemp('Manzanita, US').subscribe((data: number) => {
       this.minTemp = data;
     });
-    this.weather.getMaxTemp('Paris').subscribe((data: number) => {
+    this.weather.getMaxTemp('Manzanita, US').subscribe((data: number) => {
       this.maxTemp = data;
     });
   }
@@ -47,7 +47,7 @@ export class WeatherCardComponent implements OnInit, OnDestroy {
   }
 
   openDetails() {
-    this.router.navigateByUrl('/details/paris');
+    this.router.navigateByUrl('/details/manzanita');
   }
 
 }
